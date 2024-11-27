@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Redux Toolkit 
+    цель Redux Toolkit — помочь упростить распространенные варианты использования 
+    Redux. Он не предназначен для того, чтобы быть полным решением для всего, что вы,
+    возможно, захотите сделать с Redux, но он должен сделать большую часть кода, связанного
+    с Redux, который вам нужно написать, намного проще
+----
+    Redux Toolkit экспортирует несколько отдельных функций, которые вы можете использовать
+    в своем приложении, и добавляет зависимости от некоторых других пакетов,
+    которые обычно используются с Redux
+----
+#####   Пакет Redux Toolkit предназначен для стандартного способа написания 
+#####   логики Redux.Первоначально он был создан для решения 
+#####   трех распространенных проблем, связанных с Redux:  
+------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+            «Настройка хранилища Redux слишком сложна»
 
-## Available Scripts
+            «Мне нужно добавить много пакетов, чтобы заставить Redux делать 
+            что-то полезное»
+            
+            «Redux требует слишком много шаблонного кода»
+----
+## Hекоторые способы, которыми Redux Toolkit может 
+## помочь улучшить ваш код:
+    
++   Store
+    Каждое приложение Redux необходимо настроить и создать хранилище Redux.
+    Обычно это включает в себя несколько шагов:
+    + Импорт или создание функции корневого редуктора
+    + Настройка промежуточного программного обеспечения, вероятно, включая по крайней мере одно    промежуточное программное обеспечение для обработки асинхронной логики.
+    + Настройка расширения Redux DevTools
+    + Возможно изменение некоторой логики в зависимости от того, создается ли приложение для разработки или производства.
+    
++   Writing Reducers
+    Редьюсеры — самая важная концепция Redux. Типичная функция редуктора должна:
+    +   Посмотрите на typeполе объекта действия, чтобы увидеть, как он должен реагировать
+    +   Постоянно обновляйте его состояние, создавая копии тех частей состояния, которые              необходимо изменить, и изменяя только эти копии
+----
 
-In the project directory, you can run:
+#   RTK Query
+##### << RTK Query — это мощный инструмент для выборки и кэширования данных. Он предназначен для упрощения распространенных случаев загрузки данных в веб-приложение, избавляя от необходимости вручную писать логику выборки и кэширования данных. >>
 
-### `npm start`
+-----
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+            Отслеживание состояния загрузки для отображения счетчиков 
+        пользовательского интерфейса
+            Избегайте дублирования запросов одних и тех же данных
+            Оптимистичные обновления, чтобы сделать пользовательский интерфейс более быстрым
+            Управление временем жизни кеша при взаимодействии пользователя с пользовательским
+        интерфейсом
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+----

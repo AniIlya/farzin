@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.back{
+    background-image:url(./assets/backgraund1.png);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    /* filter: saturate(50%); */
 }
+/* .bg{
+    background-image:url(./assets/farzin.png);
+    background-size:contain ;  
+    margin: 1% auto;
+    background-repeat: no-repeat; 
+} */
+/* styles.css */
+.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #D0C2F7; /* Цвет подчеркивания */
+  }
+  
+  .with-class li a{
+    color: white;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  }
+  .with-class li .active::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #D0C2F7; /* Цвет подчеркивания */
+  }
+.with-class{
+    color: white;
+}
+.foot{
+    color:#AEA8B9 ;
+}
+.bgpages{
+    background-image: url(./assets/bgpage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sbg{
+    background-image: url(./assets/sbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgbg{
+    background-image: url(./assets/bgbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
